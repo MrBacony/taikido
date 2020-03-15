@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Message } from '@taikido/api-interfaces';
+import { IconService } from './icon.service';
 
 @Component({
   selector: 'taikido-root',
@@ -8,6 +7,8 @@ import { Message } from '@taikido/api-interfaces';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  hello$ = this.http.get<Message>('/api/hello');
-  constructor(private http: HttpClient) {}
+
+  constructor(private iconService: IconService) {
+    this.iconService.registerIcons();
+  }
 }

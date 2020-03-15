@@ -1,0 +1,238 @@
+header {
+  position: relative;
+
+  .top-nav {
+    position: absolute;
+    z-index: 1;
+    width: var(--content-width);
+    height: 24px;
+
+    font-size: 12px;
+    padding: 0 8px 0 24px;
+    left: 50%;
+    margin-left: calc(var(--content-width) * -0.5);
+
+    display: flex;
+    align-items: center;
+
+    .spacer {
+      flex-grow: 1;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      background-color: var(--color-background-light);
+      transform: skew(-35deg);
+      box-shadow: var(--shadow-base);
+    }
+
+    & > * {
+      z-index: 1;
+    }
+
+    .top-nav-item {
+      & > span {
+        font-weight: lighter;
+      }
+
+      a {
+        color: var(--color-text);
+        font-weight: normal;
+        text-decoration: none;
+      }
+    }
+
+    button {
+      &.mat-button {
+        min-width: 36px;
+        padding: 0;
+        line-height: 24px;
+        mat-icon {
+          height:18px;
+          width: 18px;
+
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .header-content {
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    z-index: 0;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: -125px;
+      width: calc(50%);
+      height: 200px;
+      background: var(--color-background-dark);
+      z-index: -1;
+      transform: skewX(-35deg);
+    }
+
+    .logo {
+      width: 330px;
+
+      padding-left: 75px;
+
+      display: flex;
+      align-items: center;
+      z-index: 0;
+      position: relative;
+
+
+      .logo-image {
+        img {
+          width: 80px;
+          height: 80px;
+          border: 1px solid var(--color-text-light);
+          border-radius: 45px;
+        }
+      }
+
+      .logo-text {
+        color: var(--color-text-light);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 40px;
+        margin-left: 20px;
+
+        span:first-of-type {
+          font-weight: bolder;
+          font-size: 21px;
+        }
+
+        span:nth-of-type(2) {
+          font-weight: lighter;
+          font-size: 12px;
+          padding-left: 3px;
+        }
+      }
+    }
+
+    .date-container {
+      width: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h1 {
+        font-weight: lighter;
+        font-size: 20px;
+
+        padding: 0 0 10px 0;
+        margin: 0;
+      }
+      .dates {
+        display: flex;
+
+        .date {
+          display: flex;
+          flex-direction: column;
+          margin-right: 30px;
+
+          h2 {
+            padding: 0;
+            margin: 0;
+
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 26px;
+          }
+
+          p {
+            padding: 0;
+            margin: 0;
+            font-weight: lighter;
+          }
+        }
+      }
+    }
+  }
+
+  .main-nav {
+    position: absolute;
+    z-index: 1;
+    width: 900px;
+    height: 36px;
+
+    bottom: -18px;
+    padding: 0 0 0 120px;
+    left: 50%;
+
+    margin-left: -508px;
+
+    display: flex;
+    align-items: center;
+
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      background-color: var(--color-background-light);
+      transform: skew(-35deg);
+      box-shadow: var(--shadow-base);
+    }
+
+    .spacer {
+      flex-grow: 1;
+    }
+
+    .obi {
+      height: 100%;
+      width: 10px;
+      margin-left: 8px;
+      transform: skew(-35deg);
+    }
+
+    .kyu-8 {
+      background-color: var(--color-kyu-8);
+    }
+    .kyu-7 {
+      background-color: var(--color-kyu-7);
+    }
+    .kyu-6 {
+      background-color: var(--color-kyu-6);
+    }
+    .kyu-5 {
+      background-color: var(--color-kyu-5);
+    }
+    .kyu-3 {
+      background-color: var(--color-kyu-3);
+    }
+    .dan {
+      width: 40px;
+      background-color: var(--color-text);
+    }
+
+    & > * {
+      z-index: 1;
+    }
+
+
+    button {
+      &.mat-button {
+        min-width: 36px;
+        padding: 0 12px;
+
+
+      }
+    }
+  }
+}

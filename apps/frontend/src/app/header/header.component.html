@@ -1,0 +1,48 @@
+<header>
+  <div class="top-nav">
+    <div class="top-nav-item">
+      <span>Einfach unverbindlich vorbeikommen: </span>
+      <a routerLink="/wegbeschreibung">Wegbeschreibung</a>
+    </div>
+    <div class="spacer"></div>
+    <button mat-button><mat-icon>mail_outline</mat-icon></button>
+    <button mat-button><mat-icon [svgIcon]="'facebook'"></mat-icon></button>
+  </div>
+
+  <div class="header-content">
+    <div class="logo">
+      <div class="logo-image">
+        <img src="assets/img/taikido.svg">
+      </div>
+      <div class="logo-text">
+        <span>TAI - KI - DO</span>
+        <span>Mannheim e.V.</span>
+      </div>
+    </div>
+    <div class="date-container">
+      <h1>Trainingszeiten:</h1>
+      <div class="dates">
+        <div class="date">
+          <h2>Mittwoch</h2>
+          <p>19:30 Uhr - 21:00 Uhr</p>
+        </div>
+        <div class="date">
+          <h2>Freitag</h2>
+          <p>19:00 Uhr - 20:30 Uhr</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-nav">
+
+    <button mat-button *ngFor="let link of mainLinks" [routerLink]="link.route">{{link.name}}</button>
+
+    <div class="spacer"></div>
+    <div class="obi kyu-8"></div>
+    <div class="obi kyu-7"></div>
+    <div class="obi kyu-6"></div>
+    <div class="obi kyu-5"></div>
+    <div class="obi kyu-3"></div>
+    <div class="obi dan"></div>
+  </div>
+</header>
